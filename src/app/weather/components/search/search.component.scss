@@ -1,0 +1,14 @@
+$bg-transparent: rgba(255, 255, 255, 0.564);
+.content-search {
+  background-color: $bg-transparent;
+  @apply w-full h-12 rounded-lg shadow-md flex justify-center items-center px-2;
+}
+
+.input-search {
+  background: rgba(255, 255, 255, 0);
+  @apply text-black w-full h-10 px-2 py-0 mx-2 outline-none border-2 border-transparent transition origin-top-right border-b-gray-500;
+}
+
+.input-search:focus {
+  @apply border-b-black;
+}

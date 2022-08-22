@@ -1,0 +1,12 @@
+$bg-transparent: rgba(255, 255, 255, 0.564);
+$bg-cold: #2563eb;
+$bg-warm: #ffc107;
+.weather-container {
+  @apply bg-gray-800 text-white min-h-screen flex justify-center items-center;
+}
+.weather-container .weather-card {
+  @apply w-full sm:w-96 rounded-2xl p-6 relative;
+}
+.bg-transparent {
+  background-color: $bg-transparent;
+}

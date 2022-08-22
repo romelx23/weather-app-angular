@@ -1,0 +1,8 @@
+$bg-transparent: rgba(255, 255, 255, 0.564);
+.content-card {
+  background-color: $bg-transparent;
+  @apply p-3 rounded-lg text-gray-700 flex flex-col gap-4;
+}
+.card-item {
+  @apply bg-slate-200 flex justify-center items-center rounded-full w-14 h-14 transition hover:scale-110 hover:cursor-pointer;
+}

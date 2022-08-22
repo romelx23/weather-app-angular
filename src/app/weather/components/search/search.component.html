@@ -1,0 +1,28 @@
+<form
+  autocomplete="off"
+  [formGroup]="searchForm"
+  (ngSubmit)="handleSubmit()"
+  class="content-search"
+>
+  <input
+    type="text"
+    class="input-search"
+    name="search"
+    placeholder="Ingrese una Ciudad"
+    formControlName="search"
+  />
+  <button type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</form>
+<ul class="list-disc px-6 font-semibold">
+  <li *ngIf="campoNoValido('search')">
+    <p class="text-red-500">Debe llenar los campos</p>
+  </li>
+  <li *ngIf="minLength('search')">
+    <p class="text-red-500">debe ingresar al menos 3 letras</p>
+  </li>
+  <li *ngIf="error">
+    <p class="text-red-500">{{ error }}</p>
+  </li>
+</ul>

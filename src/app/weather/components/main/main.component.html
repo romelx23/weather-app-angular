@@ -1,0 +1,58 @@
+<div *ngIf="!weather" class="content-card h-96">
+  <div class="content-card-center-text">
+    <p class="text-center text-2xl font-semibold">
+      Busque una ciudad para obtener el clima
+    </p>
+  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="{2}"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+    />
+  </svg>
+</div>
+<div *ngIf="weather" class="content-card font-semibold">
+  <p class="px-2 font-semibold">
+    {{ weather.main.temp_min }}°c / {{ weather.main.temp_max }}°c
+  </p>
+  <div class="flex items-center">
+    <div class="card-item">
+      <i class="fa-solid fa-wind"></i>
+    </div>
+    <div class="ml-3">
+      <p>{{ weather.main.feels_like }}/velocidad del viento</p>
+    </div>
+  </div>
+  <div class="flex items-center">
+    <div class="card-item">
+      <i class="fa-solid fa-cloud"></i>
+    </div>
+    <div class="ml-3">
+      <p>{{ weather.main.temp }} /temperatura</p>
+    </div>
+  </div>
+  <div class="flex items-center">
+    <div class="card-item">
+      <i class="fa-solid fa-water"></i>
+    </div>
+    <div class="ml-3">
+      <p>{{ weather.main.humidity }} /humedad</p>
+    </div>
+  </div>
+  <div class="flex items-center">
+    <div class="card-item">
+      <i class="fa-solid fa-gauge-high"></i>
+    </div>
+    <div class="ml-3">
+      <p>{{ weather.main.pressure }}/ presión</p>
+    </div>
+  </div>
+</div>
