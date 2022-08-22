@@ -47,6 +47,7 @@ export class SearchComponent implements OnInit {
       next: (data) => {
         // console.log(data);
         this.search.emit(data);
+        this.error = '';
       },
       error: (err) => {
         this.error = `No se encontró resultado`;
